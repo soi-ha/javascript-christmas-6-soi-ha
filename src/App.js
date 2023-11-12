@@ -1,5 +1,9 @@
+import Order from './domain/Order.js';
+
 class App {
-  async run() {}
+  async run() {
+    await Order();
+  }
 }
 
 export default App;
