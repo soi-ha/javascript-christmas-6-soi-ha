@@ -6,7 +6,7 @@ export default function AfterDiscount(
   gift,
 ) {
   if (gift !== STRING.NONE) {
-    return beforeDiscountAmount + benefitAmount + 25000;
+    return beforeDiscountAmount - benefitAmount + 25000;
   }
-  return beforeDiscountAmount + benefitAmount;
+  return beforeDiscountAmount - benefitAmount;
 }

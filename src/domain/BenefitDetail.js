@@ -56,7 +56,7 @@ export class BenefitDetail {
       const weekend = this.#benefitWeekend(this.#order);
       const starday = this.#benefitSpecial();
       const present = this.#benefitGift(this.#gift);
-      return [-christmas, -weekday, -weekend, -starday, -present];
+      return [christmas, weekday, weekend, starday, present];
     }
     return STRING.NONE;
   }

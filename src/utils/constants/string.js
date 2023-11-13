@@ -15,11 +15,17 @@ const MENU = Object.freeze({
 
 const NONE = '없음';
 const GIFT = '샴페인 1개';
+const BADGE = Object.freeze({
+  level1: '별',
+  level2: '트리',
+  level3: '산타',
+});
 
 const STRING = Object.freeze({
   MENU,
   NONE,
   GIFT,
+  BADGE,
 });
 
 export default STRING;

@@ -6,6 +6,7 @@ import GiftMenu from './domain/GiftMenu.js';
 import { BenefitDetail } from './domain/BenefitDetail.js';
 import BenefitAmount from './domain/BenefitAmount.js';
 import AfterDiscount from './domain/AfterDiscount.js';
+import EventBadge from './domain/EventBadge.js';
 
 class App {
   async run() {
@@ -34,6 +35,9 @@ class App {
       gift,
     );
     OutputView.writeAfterDiscount(afterDiscountAmount);
+
+    const badge = EventBadge(benefitAmount);
+    OutputView.writeEventBadge(badge);
   }
 }
 

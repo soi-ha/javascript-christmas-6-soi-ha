@@ -29,7 +29,7 @@ const OutputView = {
   },
   writeBenefitAmount(benefitAmount) {
     Console.print('<총혜택 금액>');
-    Console.print(`${currencyUnit(benefitAmount)}원`);
+    Console.print(`-${currencyUnit(benefitAmount)}원`);
   },
   writeAfterDiscount(after) {
     Console.print('<할인 후 예상 결제 금액>');
