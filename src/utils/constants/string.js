@@ -13,4 +13,13 @@ const MENU = Object.freeze({
   샴페인: [25000, '음료'],
 });
 
-export default MENU;
+const NONE = '없음';
+const GIFT = '샴페인 1개';
+
+const STRING = Object.freeze({
+  MENU,
+  NONE,
+  GIFT,
+});
+
+export default STRING;

@@ -1,4 +1,5 @@
 import CALENDAR from '../utils/constants/number.js';
+import STRING from '../utils/constants/string.js';
 import CalculateApplicableType from './CalculateApplicableType.js';
 
 export class BenefitDetail {
@@ -57,6 +58,6 @@ export class BenefitDetail {
       const present = this.#benefitGift(this.#gift);
       return [-christmas, -weekday, -weekend, -starday, -present];
     }
-    return '없음';
+    return STRING.NONE;
   }
 }

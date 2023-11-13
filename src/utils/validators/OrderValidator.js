@@ -1,4 +1,4 @@
-import MENU from '../constants/string.js';
+import STRING from '../constants/string.js';
 import ERROR from '../constants/error.js';
 import CalculateApplicableType from '../../domain/CalculateApplicableType.js';
 
@@ -32,7 +32,7 @@ export class OrderValidator {
   }
 
   #validateExistMenu(food) {
-    if (!Object.keys(MENU).includes(food)) {
+    if (!Object.keys(STRING.MENU).includes(food)) {
       throw new Error(ERROR.readOrder);
     }
   }

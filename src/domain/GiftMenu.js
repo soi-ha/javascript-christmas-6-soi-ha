@@ -1,6 +1,8 @@
+import STRING from '../utils/constants/string.js';
+
 export default function GiftMenu(beforeDiscountAmount) {
   if (beforeDiscountAmount >= 120000) {
-    return '샴페인 1개';
+    return STRING.GIFT;
   }
-  return '없음';
+  return STRING.NONE;
 }

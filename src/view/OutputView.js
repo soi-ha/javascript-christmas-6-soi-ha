@@ -24,8 +24,8 @@ const OutputView = {
     Console.print(`${gift}`);
   },
   writeBenefitDetail(benefit) {
-    Console.log('<혜택 내역>');
-    Console.log(`${benefit}`);
+    Console.print('<혜택 내역>');
+    Console.print(`${benefit}`);
   },
   writeBenefitAmount(benefitAmount) {
     Console.print('<총혜택 금액>');
