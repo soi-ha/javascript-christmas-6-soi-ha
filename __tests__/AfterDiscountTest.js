@@ -3,7 +3,7 @@ import AfterDiscount from '../src/domain/AfterDiscount.js';
 describe('할인 후 예상 결제금액 테스트', () => {
   test('주어진 사용예시 결과와 동일한지 확인', () => {
     const BEFORE_DISCOUNT = 142000;
-    const BENEFIT_AMOUNT = -31246;
+    const BENEFIT_AMOUNT = 31246;
     const GIFT = '샴페인 1개';
     const EXPECT_RESULT = 135754;
 
@@ -14,7 +14,7 @@ describe('할인 후 예상 결제금액 테스트', () => {
 
   test('증정 이벤트가 없을 때 ', () => {
     const BEFORE_DISCOUNT = 100000;
-    const BENEFIT_AMOUNT = -4046;
+    const BENEFIT_AMOUNT = 4046;
     const GIFT = '없음';
     const EXPECT_RESULT = 95954;
 

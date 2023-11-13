@@ -11,7 +11,7 @@ const calculateBenefit = function TotalBenefitAmount(benefit) {
   let amount = 0;
 
   benefit.map((item) => {
-    if (!isNaN(item) && item !== 0) {
+    if (item !== undefined && item !== 0) {
       amount += item;
     }
   });

@@ -6,7 +6,7 @@ describe('혜택내역 테스트', () => {
     const ORDER = { 티본스테이크: 1, 바비큐립: 1, 초코케이크: 2, 제로콜라: 1 };
     const BEFORE_DISCOUNT = 142000;
     const GIFT = '샴페인 1개';
-    const EXPECT_RESULT = [-1200, -4046, NaN, -1000, -25000];
+    const EXPECT_RESULT = [1200, 4046, undefined, 1000, 25000];
 
     const benefit = new BenefitDetail(DATE, ORDER, BEFORE_DISCOUNT, GIFT);
     expect(benefit.getBenfit()).toEqual(EXPECT_RESULT);
@@ -28,7 +28,7 @@ describe('혜택내역 테스트', () => {
     const ORDER = { 해산물파스타: 1, 제로콜라: 1 };
     const BEFORE_DISCOUNT = 38000;
     const GIFT = '없음';
-    const EXPECT_RESULT = [-2200, -0, NaN, NaN, NaN];
+    const EXPECT_RESULT = [2200, 0, undefined, undefined, undefined];
 
     const benefit = new BenefitDetail(DATE, ORDER, BEFORE_DISCOUNT, GIFT);
     expect(benefit.getBenfit()).toEqual(EXPECT_RESULT);
@@ -39,7 +39,7 @@ describe('혜택내역 테스트', () => {
     const ORDER = { 해산물파스타: 1, 초코케이크: 2, 샴페인: 1 };
     const BEFORE_DISCOUNT = 75000;
     const GIFT = '없음';
-    const EXPECT_RESULT = [NaN, -4046, NaN, NaN, NaN];
+    const EXPECT_RESULT = [undefined, 4046, undefined, undefined, undefined];
 
     const benefit = new BenefitDetail(DATE, ORDER, BEFORE_DISCOUNT, GIFT);
     expect(benefit.getBenfit()).toEqual(EXPECT_RESULT);
@@ -55,7 +55,7 @@ describe('혜택내역 테스트', () => {
     };
     const BEFORE_DISCOUNT = 95000;
     const GIFT = '없음';
-    const EXPECT_RESULT = [NaN, NaN, -4046, NaN, NaN];
+    const EXPECT_RESULT = [undefined, undefined, 4046, undefined, undefined];
 
     const benefit = new BenefitDetail(DATE, ORDER, BEFORE_DISCOUNT, GIFT);
     expect(benefit.getBenfit()).toEqual(EXPECT_RESULT);
@@ -66,7 +66,7 @@ describe('혜택내역 테스트', () => {
     const ORDER = { 해산물파스타: 1, 제로콜라: 1 };
     const BEFORE_DISCOUNT = 38000;
     const GIFT = '없음';
-    const EXPECT_RESULT = [-3400, -0, NaN, -1000, NaN];
+    const EXPECT_RESULT = [3400, 0, undefined, 1000, undefined];
 
     const benefit = new BenefitDetail(DATE, ORDER, BEFORE_DISCOUNT, GIFT);
     expect(benefit.getBenfit()).toEqual(EXPECT_RESULT);
@@ -82,7 +82,7 @@ describe('혜택내역 테스트', () => {
     };
     const BEFORE_DISCOUNT = 193000;
     const GIFT = '샴페인 1개';
-    const EXPECT_RESULT = [NaN, -0, NaN, NaN, -25000];
+    const EXPECT_RESULT = [undefined, 0, undefined, undefined, 25000];
 
     const benefit = new BenefitDetail(DATE, ORDER, BEFORE_DISCOUNT, GIFT);
     expect(benefit.getBenfit()).toEqual(EXPECT_RESULT);
