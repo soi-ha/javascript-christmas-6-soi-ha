@@ -4,8 +4,8 @@ export class VisitDateValidator {
   #date;
 
   constructor(date) {
-    this.#date = date;
     this.#validate(date);
+    this.#date = date;
   }
 
   #validate(date) {
