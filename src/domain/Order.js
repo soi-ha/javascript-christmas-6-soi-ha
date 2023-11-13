@@ -9,6 +9,6 @@ export default async function Order() {
     return order.getOrder();
   } catch (error) {
     Console.print(error.message);
-    await Order();
+    return Order();
   }
 }

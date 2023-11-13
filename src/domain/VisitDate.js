@@ -9,6 +9,6 @@ export default async function VisitDate() {
     return date;
   } catch (error) {
     Console.print(error.message);
-    await VisitDate();
+    return VisitDate();
   }
 }
