@@ -1,5 +1,6 @@
 import MENU from '../constants/string.js';
 import ERROR from '../constants/error.js';
+import CalculateApplicableType from '../../domain/CalculateApplicableType.js';
 
 export class OrderValidator {
   #order;
@@ -48,15 +49,7 @@ export class OrderValidator {
   }
 
   #validateOnlyBeverage(newFormatOrder) {
-    const beverageKeys = Object.keys(MENU).filter(
-      (key) => MENU[key][1] === '음료',
-    );
-    let beverageCount = 0;
-    beverageKeys.map((beverage) => {
-      if (Object.keys(newFormatOrder).includes(beverage)) {
-        beverageCount += 1;
-      }
-    });
+    const beverageCount = CalculateApplicableType('음료', newFormatOrder);
 
     if (beverageCount === Object.keys(newFormatOrder).length) {
       throw new Error(ERROR.readOrder);
