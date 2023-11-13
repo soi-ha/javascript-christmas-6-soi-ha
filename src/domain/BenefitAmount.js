@@ -1,4 +1,4 @@
-import STRING from '../utils/constants/string';
+import STRING from '../utils/constants/string.js';
 
 export default function BenefitAmount(benefit) {
   if (benefit === STRING.NONE) {
