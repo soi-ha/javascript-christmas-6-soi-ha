@@ -15,17 +15,27 @@ const MENU = Object.freeze({
 
 const NONE = '없음';
 const GIFT = '샴페인 1개';
+
 const BADGE = Object.freeze({
   level1: '별',
   level2: '트리',
   level3: '산타',
 });
 
+const BENEFIT_LIST = [
+  '크리스마스 디데이 할인',
+  '평일 할인',
+  '주말 할인',
+  '특별 할인',
+  '증정 이벤트',
+];
+
 const STRING = Object.freeze({
   MENU,
   NONE,
   GIFT,
   BADGE,
+  BENEFIT_LIST,
 });
 
 export default STRING;
