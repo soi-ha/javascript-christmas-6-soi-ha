@@ -1,8 +1,10 @@
 import Order from './domain/Order.js';
+import VisitDate from './domain/VisitDate.js';
 
 class App {
   async run() {
-    await Order();
+    const order = await Order();
+    const test = await VisitDate();
   }
 }
 
