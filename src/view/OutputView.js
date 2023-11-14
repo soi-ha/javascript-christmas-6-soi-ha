@@ -29,20 +29,23 @@ const OutputView = {
     Console.print(`${gift}`);
   },
 
-  // [christmas, weekday, weekend, starday, present]
   writeBenefitDetail(benefit) {
     Console.print('\n<혜택 내역>');
     if (benefit === STRING.NONE) {
       Console.print(benefit);
     } else {
-      benefit.forEach((item, index) => {
-        if (item !== undefined && item !== 0) {
-          Console.print(
-            `${STRING.BENEFIT_LIST[index]}: -${currencyUnit(item)}원`,
-          );
-        }
-      });
+      this.choiceRealBenefit(benefit);
     }
+  },
+
+  choiceRealBenefit(benefit) {
+    benefit.forEach((item, index) => {
+      if (item !== undefined && item !== 0) {
+        Console.print(
+          `${STRING.BENEFIT_LIST[index]}: -${currencyUnit(item)}원`,
+        );
+      }
+    });
   },
 
   writeBenefitAmount(benefitAmount) {
